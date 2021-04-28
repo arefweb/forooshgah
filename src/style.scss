@@ -1,0 +1,154 @@
+@import "grid" ;
+
+@font-face {
+  font-family: "Vazir";
+  src: url("./assets/fonts/Vazir.woff2");
+}
+
+html{
+  direction: rtl;
+}
+
+body{
+  margin: 0;
+  font-family: "Vazir";
+}
+
+/************** CART *************/
+.cart{
+  &__head{
+    text-align: center;
+  }
+  aside{
+    display: flex;
+    justify-content: center;
+    & *{
+      margin: 0.5rem;
+    }
+  }
+  &__body{
+    justify-content: center;
+    &-list{
+      list-style: none;
+      padding: 0;
+      width: 500px;
+      &-item{
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid silver;
+        border-radius: 5px;
+        margin-top: 1rem;
+        padding: 1rem;
+        &-info{
+          img{
+            height: 200px;
+          }
+        }
+        &-qty{
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          h3{
+            text-align: center;
+          }
+          button{
+            background-color: white;
+            border: 1px solid silver;
+            border-radius: 5px;
+            padding: 5px 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            &:active{
+              color: white;
+              background-color: gray;
+            }
+          }
+        }
+      }
+    }
+  }
+  .emptyCart{
+    text-align: center;
+  }
+}
+
+/************* SHOP ***************/
+.shop{
+  margin-top: 3.125rem;
+  margin-bottom: 3.125rem;
+  &__row{
+    &-product{
+      border: 1px solid #ebebeb;
+      text-align: center;
+      &-image{
+        width: 100%;
+      }
+      button{
+        background-color: white;
+        border: 1px solid #0fabc6;
+        padding: 10px;
+        margin-bottom: 1rem;
+        cursor: pointer;
+        color: #0fabc6;
+        font-family: "Vazir";
+      }
+    }
+  }
+}
+
+/************* NAVIGATION ***************/
+.navigation{
+  background-color: #4d4d4d;
+  &__nav{
+    &-list{
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      &-item{
+        a{
+          padding: 20px 10px;
+          display: block;
+          text-decoration: none;
+          color: white;
+          &:visited{
+            color: white;
+          }
+          svg{
+            font-size: 1.2rem;
+          }
+        }
+        a[href="/cart"]{
+          position: relative;
+          & span{
+            display: none;
+            width: 20px;
+            height: 20px;
+            background-color: #c83434;
+            position: absolute;
+            top: 2px;
+            right: 0;
+            text-align: center;
+            border-radius: 3px;
+            &.showCount{
+              display: inline-block;
+            }
+          }
+          
+        }
+        &:hover{
+          background-color: #0fabc6;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
